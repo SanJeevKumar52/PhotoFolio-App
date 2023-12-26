@@ -1,0 +1,29 @@
+.mainContainer{
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn{
+    font:message-box;
+    font-size:15px;
+    margin-top: 25px;
+    float: right;
+    height: 31px;
+    color: #0277ff;
+    width: 100px;
+    border: 2px solid #0277ff;
+    border-radius: 0.4rem;
+}
