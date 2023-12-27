@@ -1,15 +1,22 @@
 
 .input{
-    width: 55%;
+    width: 40%;
     margin: 0 2%;
     height: 40px;
     font-size: large;
     border-radius: 1rem;
+    border: none;
+
+}
+.input:focus,
+.input:hover {
+    border: 3px solid blue;
+    /* Change the border color to blue when focused or hovered */
 }
 
 .formBtn{
     width: 70px;
-    margin: 0 2%;
+    margin: 0 1%;
     height: 31px;
     color: white;
     font-size: large;
@@ -19,9 +26,11 @@
 .clearBtn{
     background-color:rgb(255,19,0);
     height: 40px;
-    
+    border: none;
 }
 .createBtn{
     background-color:rgb(0,119,255);
     height: 40px;
+    border: none;
+
 }

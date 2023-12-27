@@ -3,7 +3,7 @@ import AlbumsList from "./components/AlbumsList/AlbumList"
 function App() {
   return (
     <>
-    <NavBar/>
+    <NavBar/> 
     <AlbumsList/>
     </>
   );

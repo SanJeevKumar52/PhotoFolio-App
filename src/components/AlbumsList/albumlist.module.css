@@ -1,19 +1,39 @@
 .mainContainer{
-    width: auto;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
+   /*  border: 5px solid red; */
+    flex-direction: column;
 }
 
+.albumContainer{
+    width: 80% ;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top:auto;
+    /* border: 5px solid rgb(20, 208, 76); */
+}
 
+.albumForm{
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+}
 
 .header{
     width: 100%;
     display: flex;
     justify-content:space-between;
     font-family: "Poppins", sans-serif;
+    justify-content:space-around;
+
 }
 
 .btn{
