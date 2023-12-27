@@ -1,7 +1,7 @@
 import styles from "./imagelist.module.css";
 import React from 'react'
 
-const ImageList = () => {
+const ImageList = (props) => {
   return (
     <div>
       

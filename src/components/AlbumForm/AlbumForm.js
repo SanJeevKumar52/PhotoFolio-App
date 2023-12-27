@@ -3,6 +3,14 @@ import React from 'react'
 import { useRef } from "react";
 
 
+// firestore database
+import {db} from "../../firebaseInit";
+import { collection, addDoc } from "firebase/firestore"; 
+
+// toast for notification
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const AlbumForm = () => {
 
 
@@ -14,12 +22,23 @@ const AlbumForm = () => {
     nameRef.current.focus();
 }
 
-  async function handleSubmit(e){
-    e.preventDefault();
+async function handleSubmit(e){
+  e.preventDefault();
 
-    console.log(nameRef.current.value)
+  // Add a new document with a generated id.
+  const docRef = await addDoc(collection(db, "album"),{
+      Albumname:nameRef.current.value,
+      imageList:[],
+      }
+  );
 
-  }
+  // notification for new album
+  toast.success("New Album added!.");
+  
+  // clear values inside form after submission and focusing on input box
+  nameRef.current.value="";
+  nameRef.current.focus();
+}
   return (
     <>
       <div className="formContainer">
@@ -34,7 +53,7 @@ const AlbumForm = () => {
 
           {/* delete data from input box  */}
           
-          <button className={`${styles.formBtn} ${styles.clearBtn}`} onClick={clearForm}>Clear</button>
+          <button type="button" className={`${styles.formBtn} ${styles.clearBtn}`} onClick={clearForm}>Clear</button>
           {/* submit form and create a new album */}
           <button className={`${styles.formBtn} ${styles.createBtn}`} >Create</button>
 
