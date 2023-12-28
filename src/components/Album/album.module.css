@@ -1,43 +1,64 @@
-.card{
+.card {
     display: grid;
-    width:20%;
-    border: 8px solid rgb(32, 17, 192);
     flex-direction: row;
     flex-wrap: wrap;
     margin: 2px;
     align-items: center;
+    margin: 10px;
+    padding: 5px 5px 0 5px;
+    width: 16%; /* Default width for larger screens */
+
+    @media screen and (max-width: 768px) {
+        /* Adjust the width for smaller screens */
+        width: 26%;
+    }
+    @media screen and (max-width: 600px) {
+        /* Adjust the width for smaller screens */
+        width: 45%;
+        margin-left: 25%;
+    }
+    
 }
 /* album container */
-.cardContainer{
+.cardContainer {
     width: 100%;
     height: 180px;
     display: flex;
     flex-direction: column;
     margin: 10px;
     border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0px 0px 4px 0px lightgrey;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
     background-color: hsl(216, 24%, 96%);
     padding: 5px 5px 0 5px;
     color: rgba(16, 15, 15, 0.648);
     cursor: pointer;
-    /* border: 2px solid black; */
 }
+
 
 /* album logo */
 .cardImage{
     width: 100%;
     height: 80%;
-    background-image: url("../Image/cardimage.png");
+   /*  background-image: url("../Image/cardimage.png"); */
     background-size:cover;
+    object-fit:contain;
+    /* border:1px solid maroon; */
 }
+
+
 
 /* album name */
 .cardName{
-    width: 100%;
     height: 20%;
+    font-size: 1.4rem;
+    font-weight: 900;
+    justify-self: baseline;
+    padding-block: 15px;
+    text-align: center;
+    width: 100%;
 }
 
+
 .cardContainer:hover{
-    background-color:#577fdb;
+    background-color:#0077ff;
 }

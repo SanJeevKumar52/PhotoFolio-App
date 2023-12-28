@@ -14,9 +14,10 @@ const Album = (props) => {
 
         <>
             <div className={styles.card}>
-                <div className={styles.cardContainer}>
+                <div className={styles.cardContainer} onClick={handleClick}>
 
-                    <div className={styles.cardImage} onClick={handleClick} > </div>
+                    <div className={styles.cardImage} > <img  className={styles.cardImage}  alt='albumImg' src='\cardimage.png'/> </div>
+                   {/*  <img className={styles.cardImage} alt='albumImg' src='./cardimage.png'/> */}
                     <div className={styles.cardName}>{info.Albumname}</div>
 
                 </div>

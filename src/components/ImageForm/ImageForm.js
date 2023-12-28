@@ -92,7 +92,7 @@ const ImageForm = (props) => {
 
         <>
             <ToastContainer />
-            <div>
+            <div className={styles.formContainer}>
                 <h1>{!updateImage ? "Add an Image" : "Update Image"}</h1>
                 {/* for name of the image */}
 
@@ -112,7 +112,7 @@ const ImageForm = (props) => {
                     <br />
 
                     {/* clear data inside the input box */}
-                    <div >
+                    <div className={styles.buttonContainer} >
                     <button className={`${styles.btn} ${styles.clear}`}
                         onClick={clearForm}>Clear
                     </button>

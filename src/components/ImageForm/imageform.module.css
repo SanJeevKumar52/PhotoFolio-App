@@ -1,23 +1,69 @@
-/* input box  */
-.inputBox{
-    width: 43%;
-    margin-right: 2%;    
+.formContainer {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.24);
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
-/* buttons */
-.btn{
-    margin: 10px;
+.updateIMgForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputContainer {
+    margin-bottom: 15px;
+}
+
+.inputBox {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid transparent;
+    border-radius: 30px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.inputBox:hover,
+.inputBox:focus {
+    border: 3px solid #007bff; /* Blue color, you can change it */
+    box-shadow: 0 0 7px rgba(38, 215, 21, 0.5); /* Optional: Add a subtle box shadow on focus */
+}
+
+
+
+.buttonContainer {
+    width: 300px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.btn {
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.24);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    outline: none;
+    padding-block: 7px;
     width: 100px;
-    height: 31px;
-    color: white;
+    height: 40px;
 }
 
-/* add button */
-.add{
-    background-color: #2a3287;
+.clear {
+    background-color: #ff0000; /* Red color, you can change it */
+    color: #fff;
 }
 
-/* clear button */
-.clear{
-    background-color:#ff414e;
+.add {
+    background-color: #0077ff; /* Green color, you can change it */
+    color: #fff;
 }
