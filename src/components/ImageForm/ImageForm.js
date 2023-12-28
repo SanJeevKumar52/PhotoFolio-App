@@ -4,8 +4,8 @@ import React from 'react'
 
 import { useEffect, useRef } from "react"
 
-import {db} from "../../firebaseInit";
-import { doc, updateDoc, arrayUnion, arrayRemove} from "firebase/firestore"; 
+import { db } from "../../firebaseInit";
+import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 
 // toast for notification
 import { ToastContainer, toast } from 'react-toastify';
@@ -25,32 +25,32 @@ const ImageForm = (props) => {
         imageNameRef.current.focus();
     }
 
-     // to update any image within the imagelist
-     async function handleUpdateSubmit(e){
+    // to update any image within the imagelist
+    async function handleUpdateSubmit(e) {
         e.preventDefault();
 
         // old data of image inside the database
-        const oldData={
-            name:updateImage.name,
-            link:updateImage.link
+        const oldData = {
+            name: updateImage.name,
+            link: updateImage.link
         };
-        
+
         // new updated data entered by the user
-        const newData={
-            name:imageNameRef.current.value,
-            link:imageUrlRef.current.value
+        const newData = {
+            name: imageNameRef.current.value,
+            link: imageUrlRef.current.value
         };
 
         // adding new Image
         const albumRef = doc(db, 'album', albumId);
-         updateDoc(albumRef,{
-            imageList:arrayUnion(newData)
+        updateDoc(albumRef, {
+            imageList: arrayUnion(newData)
         });
-        
+
         // removing old image 
-        updateDoc(albumRef,{
-            imageList:arrayRemove(oldData),
-            
+        updateDoc(albumRef, {
+            imageList: arrayRemove(oldData),
+
         });
 
         toast.success(" Image Updated !")
@@ -60,30 +60,30 @@ const ImageForm = (props) => {
 
         // hide the ImageForm
         setShowImageForm(false);
-        
+
         // clear data within the ImageForm
         clearForm();
     }
 
     // add a new Image in Image list
-    async function handleSubmit(e){
+    async function handleSubmit(e) {
         e.preventDefault();
 
         // data of the Image
-        const data={
-            name:imageNameRef.current.value,
-            link:imageUrlRef.current.value
+        const data = {
+            name: imageNameRef.current.value,
+            link: imageUrlRef.current.value
         };
 
         // adding new image inside the array of image in database
         const albumRef = doc(db, 'album', albumId);
-        await updateDoc(albumRef,{
-            imageList:arrayUnion(data)
+        await updateDoc(albumRef, {
+            imageList: arrayUnion(data)
         });
 
         // success notification
         toast.success("New Image Added to your Album!")
-        
+
         // clear form's data
         clearForm();
     }
@@ -96,7 +96,7 @@ const ImageForm = (props) => {
                 <h1>{!updateImage ? "Add an Image" : "Update Image"}</h1>
                 {/* for name of the image */}
 
-                <form onSubmit={updateImage ? handleUpdateSubmit : handleSubmit}>
+                <form className={styles.updateIMgForm} onSubmit={updateImage ? handleUpdateSubmit : handleSubmit}>
                     <input type="text"
                         className={styles.inputBox}
                         placeholder="Enter Name"
@@ -112,6 +112,7 @@ const ImageForm = (props) => {
                     <br />
 
                     {/* clear data inside the input box */}
+                    <div >
                     <button className={`${styles.btn} ${styles.clear}`}
                         onClick={clearForm}>Clear
                     </button>
@@ -119,6 +120,7 @@ const ImageForm = (props) => {
                         {/* show add or update on the button   */}
                         {!updateImage ? "Add" : "Update"}
                     </button>
+                    </div>
                 </form>
             </div>
 

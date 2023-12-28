@@ -31,7 +31,7 @@ function AlbumList() {
             setAlbumList(card);
         });
     }, []);
-    
+
     return (
         <>
             <div className={styles.mainContainer}>

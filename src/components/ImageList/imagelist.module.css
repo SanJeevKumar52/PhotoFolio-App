@@ -1,0 +1,63 @@
+/* button container */
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.btnContainer input {
+    width: 50%;
+    height: 45px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    /* Add transition for smooth effect */
+}
+
+/* Apply blue border on hover and focus */
+.btnContainer input:hover,
+.btnContainer input:focus {
+    border: 2px solid #007bff;
+    /* Adjust the border color as needed */
+}
+
+/* buttons */
+.btn {
+    width: 90px;
+    height: 45px;
+    color: rgb(21, 20, 20);
+    font-weight:bolder;
+    font-size: 15px;
+    border: none;
+    border-radius: 1rem;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* back button */
+.backBtn {
+    float: left;
+    background-color: #51d0de;
+}
+
+/* add image button */
+.addBtn {
+    float: right;
+    background-color: #f44336;
+}
+
+/* imagelist containing all the image cards */
+.imageList {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}

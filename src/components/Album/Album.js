@@ -5,7 +5,6 @@ const Album = (props) => {
 
     // info about the album and to open an album
     var { info, setOpenAlbum } = props;
-
      // onClick over Album open the Album's content
      function handleClick(){
         setOpenAlbum({albumId:info.id,open:true});
@@ -14,7 +13,7 @@ const Album = (props) => {
     return (
 
         <>
-            <div className='Card'>
+            <div className={styles.card}>
                 <div className={styles.cardContainer}>
 
                     <div className={styles.cardImage} onClick={handleClick} > </div>
@@ -23,6 +22,7 @@ const Album = (props) => {
                 </div>
                 
             </div>
+            
         </>
     )
 }
