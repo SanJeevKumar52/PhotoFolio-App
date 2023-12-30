@@ -33,7 +33,7 @@ async function handleSubmit(e){
   );
 
   // notification for new album
-  toast.success("New Album added!.");
+  toast.success("Album Added Successfully!.");
   
   // clear values inside form after submission and focusing on input box
   nameRef.current.value="";
@@ -41,6 +41,7 @@ async function handleSubmit(e){
 }
   return (
     <>
+      <ToastContainer />
       <div className="formContainer">
         <h1>Create an album</h1>
         

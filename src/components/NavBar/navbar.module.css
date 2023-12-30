@@ -4,7 +4,7 @@
     /* Added this line to set margin-left to zero */
     width: 100%;
     height: 60px;
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(160,160,249) 0%,rgb(160,160,249) 90%);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, hsl(240, 88%, 80%) 0%,rgb(160,160,249) 90%);
     color: #080111;
     padding: 10px 6%;
     position: sticky;

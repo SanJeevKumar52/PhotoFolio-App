@@ -2,7 +2,7 @@ import styles from "./imageform.module.css";
 
 import React from 'react'
 
-import { useEffect, useRef } from "react"
+import {  useRef } from "react"
 
 import { db } from "../../firebaseInit";
 import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
@@ -17,6 +17,8 @@ const ImageForm = (props) => {
     // to store image name and image url
     const imageNameRef = useRef();
     const imageUrlRef = useRef();
+
+    
 
     // claer image form's data 
     function clearForm() {

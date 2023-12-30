@@ -1,3 +1,4 @@
+/* Card styles */
 .card {
     display: grid;
     flex-direction: row;
@@ -12,6 +13,7 @@
         /* Adjust the width for smaller screens */
         width: 26%;
     }
+    
     @media screen and (max-width: 600px) {
         /* Adjust the width for smaller screens */
         width: 45%;
@@ -19,7 +21,8 @@
     }
     
 }
-/* album container */
+
+/* Album container styles */
 .cardContainer {
     width: 100%;
     height: 180px;
@@ -31,24 +34,21 @@
     background-color: hsl(216, 24%, 96%);
     padding: 5px 5px 0 5px;
     color: rgba(16, 15, 15, 0.648);
-    cursor: pointer;
+    cursor: pointer; /* Added cursor: pointer */
 }
 
-
-/* album logo */
-.cardImage{
+/* Album logo styles */
+.cardImage {
     width: 100%;
-    height: 80%;
-   /*  background-image: url("../Image/cardimage.png"); */
-    background-size:cover;
-    object-fit:contain;
-    /* border:1px solid maroon; */
+    height: 75%;
+    /* background-image: url("../Image/cardimage.png"); */
+    background-size: cover;
+    object-fit: contain;
+    /* border: 1px solid maroon; */
 }
 
-
-
-/* album name */
-.cardName{
+/* Album name styles */
+.cardName {
     height: 20%;
     font-size: 1.4rem;
     font-weight: 900;
@@ -58,7 +58,9 @@
     width: 100%;
 }
 
-
-.cardContainer:hover{
-    background-color:#0077ff;
+/* Hover effect */
+.cardContainer:hover {
+    background-color: #8cd2da;
+    cursor: pointer; /* Added cursor: pointer */
+    color: black;
 }

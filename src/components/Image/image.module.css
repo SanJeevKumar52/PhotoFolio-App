@@ -1,70 +1,105 @@
-
 /* main card container */
-.imageCard{
+.imageCard {
     height: 225px;
-    width: 200px;
+    width: 250px;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient( 135deg, #15d237 10%, #5a6b77 100%);
+    background-color: rgba(0, 0, 0, 0.514);
     padding: 5px;
     border-radius: 5px;
     margin: 10px;
     box-shadow: 0px 2px 4px -2px lightgrey;
-}
-
-.imageCard:hover{
-    background-image: linear-gradient( 135deg, #489ad5 10%, #736EFE 100%);
-}
-
-/* image box for showing image */
-/* on any error in loading image it will show a background image */
-.imageBox{
+    overflow: hidden; /* Added overflow hidden for child elements */
+    position: relative; /* Added relative positioning for child elements */
+    transition: background-image 0.3s ease; /* Added transition for smooth background change */
+    
+  }
+  
+  .imageCard:hover {
+    background-image: linear-gradient(135deg, #11076c 10%, #736EFE 100%);
+  }
+  
+  /* image box for showing image */
+  /* on any error in loading image, it will show a background image */
+  .imageBox {
     width: 100%;
-    height:100%;
+    height: 100%;
     overflow: hidden;
     background-image: url("../Image/cardimage.png");
     background-size: cover;
     background-color: white;
-}
-
-/* image within image box */
-.imageBox img{
+    position: relative;
+    border-bottom-left-radius: 4rem;
+  }
+  
+  /* overlay for additional information */
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-}
-
-/* image info */
-.imageInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Added transition for smooth overlay fade */
+  }
+  
+  .imageOverlay:hover {
+    opacity: 1;
+  }
+  
+  /* image within image box */
+  .imageBox img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; /* Added transition for smooth image scale */
+  }
+  
+  /* image info */
+  .imageInfo {
     width: 100%;
     height: 25px;
-    color: white;
-    /* justify-content: flex-start; */
-}
-
-
-/* button inside image card */
-.imageBtn{
+    color: rgb(214, 228, 18);
+    font-weight: bolder;
+    font-size: 1.5rem;
+  }
+  
+  /* button inside image card */
+  .imageBtn {
     display: none;
     float: right;
     margin: 4px;
     margin-top: 5px;
-    border-radius:none;
+    border-radius: none;
     color: white;
-}
-
-/* delete button */
-.deleteBtn{
+    cursor: pointer; /* Added cursor pointer for better user feedback */
+  }
+  
+  /* delete button */
+  .deleteBtn {
+    width:50px ;
     background-color: crimson;
-}
+  }
+  
+  /* update button */
+  .editBtn {
+    width:50px ;
 
-/* update button  */
-.editBtn{
     background-color: #c277e0;
-}
-
-/* showing buttons on hovering */
-.imageCard:hover .imageBtn{
+  }
+  
+  /* showing buttons on hovering */
+  .imageCard:hover .imageBtn {
     display: inline;
-}
-
-
+  }
+  
+  /* Scale image on hover */
+  .imageCard:hover .imageBox img {
+    transform: scale(1.1);
+  }
+  
