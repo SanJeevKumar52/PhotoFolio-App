@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PhotoFolio-App)/static/css/main.c9572a0d.css",
+    "main.js": "/PhotoFolio-App)/static/js/main.c52e80d8.js",
+    "static/media/cardimage.png": "/PhotoFolio-App)/static/media/cardimage.d9e2d94508db3c591574.png",
+    "static/media/PhotoFolioLogo.png": "/PhotoFolio-App)/static/media/PhotoFolioLogo.7f2906692629e8629a34.png",
+    "index.html": "/PhotoFolio-App)/index.html",
+    "main.c9572a0d.css.map": "/PhotoFolio-App)/static/css/main.c9572a0d.css.map",
+    "main.c52e80d8.js.map": "/PhotoFolio-App)/static/js/main.c52e80d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9572a0d.css",
+    "static/js/main.c52e80d8.js"
+  ]
+}
