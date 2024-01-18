@@ -1,12 +1,18 @@
-import styles from "./navbar.module.css"
+// Importing styles from the specified CSS module for the Navbar component
+import styles from "./navbar.module.css";
 
-export default function NavBar(){
-    return(
+// Defining the NavBar functional component
+export default function NavBar() {
+    return (
         <>
-        <div className={styles.navbar}>
-            <img className={styles.logo} src={require("../Image/PhotoFolioLogo.png")} alt="NavbarLogo"/>
-            <span>PhotoFolio</span>
-        </div>
+            {/* Container div for the Navbar with styles applied from the imported CSS module */}
+            <div className={styles.navbar}>
+                {/* Logo image with styles applied */}
+                <img className={styles.logo} src={require("../Image/PhotoFolioLogo.png")} alt="NavbarLogo" />
+
+                {/* Text span for the brand name "PhotoFolio" */}
+                <span>PhotoFolio</span>
+            </div>
         </>
-    )
+    );
 }

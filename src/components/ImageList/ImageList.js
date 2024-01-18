@@ -2,9 +2,10 @@
 import styles from "./imagelist.module.css";
 import Slider from "react-carousel-responsive";
 import "react-carousel-responsive/dist/styles.css";
+
+
 // Importing necessary React features
-import React from 'react'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 // Importing additional components
 import ImageForm from "../ImageForm/ImageForm";
@@ -131,10 +132,9 @@ const ImageList = (props) => {
       {/* Lightbox container */}
       {isOpen && (
         <div className={styles.lightboxoverlay} >
-          <button className={styles.PopUpbutton} onClick={closeLightbox}>Close</button>
           <div className={styles.lightboxcontainer}>
-
-  
+          <button className={styles.PopUpbutton} onClick={closeLightbox}>Close</button>
+            
             {/* Image displayed in the lightbox */}
             <Slider  showArrows={true}  >
                 {imageList.map( (img) =>{
@@ -142,7 +142,6 @@ const ImageList = (props) => {
                   <img src={img.link} alt="PopUpImage" />
               </div>
                 })}
-                
             </Slider>
             
           </div>

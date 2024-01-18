@@ -1,34 +1,44 @@
+/* Styles for the NavBar container */
 .navbar {
+    /* Adjusting negative margin to align the navbar properly */
     margin-top: -15px;
     margin-left: -8px;
-    /* Added this line to set margin-left to zero */
+    /* Setting margin-left to zero to align with the edge of the container */
+    margin-left: 0;
+    /* Added this line to set width to 100% */
     width: 100%;
     height: 60px;
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, hsl(240, 88%, 80%) 0%,rgb(160,160,249) 90%);
+    /* Applying a radial gradient background to the navbar */
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, hsl(240, 88%, 80%) 0%, rgb(160, 160, 249) 90%);
+    /* Text color for the navbar */
     color: #080111;
+    /* Padding for the content inside the navbar */
     padding: 10px 6%;
+    /* Making the navbar sticky */
     position: sticky;
+    /* Flex container to arrange items */
     display: flex;
     align-self: center;
 }
 
-/* navbar heading */
+/* Styles for the heading inside the NavBar */
 .navbar span {
+    /* Font properties for the heading */
     font-size: 1.2rem;
     font-weight: bold;
     font-family: sans-serif;
+    /* Adjusting margin for proper positioning */
     margin-top: 20px;
     margin-left: 5px;
-    
 }
 
-/* navbar Logo image */
-
+/* Styles for the Logo image inside the NavBar */
 .logo {
+    /* Dimensions of the logo image */
     height: 55px;
     width: 55px;
+    /* Adjusting margins for proper positioning */
     margin-right: 5px;
     margin-left: -15px;
     margin-top: 6px;
-
 }

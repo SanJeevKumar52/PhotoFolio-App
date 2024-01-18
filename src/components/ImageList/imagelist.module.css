@@ -12,11 +12,13 @@
     margin-right: 20%;
 }
 
+/* Styling for heading within button container */
 .btnContainer h1{
     font-size: 1.7rem;
     font-weight: 700;
 }
 
+/* Styling for input within button container */
 .btnContainer input {
     width: 280px;
     height: 45px;
@@ -24,18 +26,14 @@
     border-radius: 15px;
     padding: 5px;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease; /* Add transition for smooth effect */
     cursor: pointer;
-
-    /* Add transition for smooth effect */
-
 }
 
 /* Apply blue border on hover and focus */
 .btnContainer input:hover,
 .btnContainer input:focus {
-    border: 2px solid #007bff;
-    /* Adjust the border color as needed */
+    border: 2px solid #007bff; /* Adjust the border color as needed */
 }
 
 /* buttons */
@@ -62,14 +60,14 @@
     cursor: pointer;
     font-size: 1.2rem;
     transition: background-color 0.3s ease; /* Add a smooth transition effect */
-  }
-  
-  .backBtn:hover {
+}
+
+.backBtn:hover {
     background-color: #3fa9b9; /* Change background color on hover */
-  }
-  
-  /* Add button */
-  .addBtn {
+}
+
+/* Add button */
+.addBtn {
     float: right;
     background-color: #f44336;
     color: #070606; /* Text color to contrast with the background */
@@ -80,12 +78,11 @@
     font-size: 0.9rem;
     font-weight: bolder;
     transition: background-color 0.3s ease; /* Add a smooth transition effect */
-  }
-  
-  .addBtn:hover {
+}
+
+.addBtn:hover {
     background-color: #d73829; /* Change background color on hover */
-  }
-  
+}
 
 /* imagelist containing all the image cards */
 .imageList {
@@ -95,6 +92,7 @@
     padding-left: 5%;
 }
 
+/* Lightbox overlay */
 .lightboxoverlay {
     position: fixed;
     top: 0;
@@ -108,44 +106,38 @@
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-  }
+}
 
+/* Lightbox container */
 .lightboxcontainer {
     width: 80%;
     display: flex;
     flex-direction: column;
     margin-top: 35px;
-
-
 }
 
+/* Styling for images inside the lightbox container */
 .lightboxcontainer img {
     width: 100%;
     height: 80vh;
 }
 
+/* Button within the lightbox */
 .PopUpbutton {
-    width: 120px;
-    /* Adjust the width as needed */
-    height: 40px;
-    /* Adjust the height as needed */
-    margin-left: 60%;
+    width: 100px;
+    height: 50px;
+    margin-left: 84%;
+    margin-bottom: 19px;
     font-size: 1.5rem;
-    /* Adjust the font size as needed */
     text-align: center;
     background-color: #db5034;
-    /* Use a modern color for the background */
     color: #212121;
-    /* Set text color to contrast with the background */
     border: none;
-    border-radius: 5px;
-    /* Add rounded corners for a modern feel */
+    border-radius: 1.3rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* Add a smooth transition effect */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }
 
 .PopUpbutton:hover {
-    background-color: #2980b9;
-    /* Change background color on hover */
+    background-color: #2980b9; /* Change background color on hover */
 }

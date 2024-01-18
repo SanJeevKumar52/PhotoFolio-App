@@ -1,68 +1,81 @@
+// Import styles from the specified CSS module
 import styles from "./albumform.module.css";
-import React from 'react'
-import { useRef } from "react";
 
+// Import React and useRef from the React library
+import React, { useRef } from 'react';
 
-// firestore database
-import {db} from "../../firebaseInit";
-import { collection, addDoc } from "firebase/firestore"; 
+// Import Firebase related modules for database operations
+import { db } from "../../firebaseInit";
+import { collection, addDoc } from "firebase/firestore";
 
-// toast for notification
+// Import ToastContainer and toast for notifications
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Define the AlbumForm component
 const AlbumForm = () => {
 
-
+  // Ref to store the album name input value
   const nameRef = useRef();
 
-  function clearForm(e){
+  // Function to clear the form's data
+  function clearForm(e) {
     e.preventDefault();
-    nameRef.current.value="";
+    nameRef.current.value = "";
     nameRef.current.focus();
-}
+  }
 
-async function handleSubmit(e){
-  e.preventDefault();
+  // Function to handle the form submission and create a new album
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-  // Add a new document with a generated id.
-  const docRef = await addDoc(collection(db, "album"),{
-      Albumname:nameRef.current.value,
-      imageList:[],
-      }
-  );
+    // Add a new document with a generated id to the "album" collection
+    const docRef = await addDoc(collection(db, "album"), {
+      Albumname: nameRef.current.value,
+      imageList: [],
+    });
 
-  // notification for new album
-  toast.success("Album Added Successfully!.");
-  
-  // clear values inside form after submission and focusing on input box
-  nameRef.current.value="";
-  nameRef.current.focus();
-}
+    // Notification for successful album creation
+    toast.success("Album Added Successfully!");
+
+    // Clear values inside the form after submission and focus on the input box
+    nameRef.current.value = "";
+    nameRef.current.focus();
+  }
+
+  // Render the AlbumForm component
   return (
     <>
       <ToastContainer />
       <div className="formContainer">
         <h1>Create an album</h1>
-        
-        <form  onSubmit={handleSubmit}>
-          <input type="text"
+
+        {/* Form for entering album name */}
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
             placeholder="Album Name"
-            ref={nameRef} 
+            ref={nameRef}
             required
-            className={styles.input} />
+            className={styles.input}
+          />
 
-          {/* delete data from input box  */}
-          
-          <button type="button" className={`${styles.formBtn} ${styles.clearBtn}`} onClick={clearForm}>Clear</button>
-          {/* submit form and create a new album */}
-          <button className={`${styles.formBtn} ${styles.createBtn}`} >Create</button>
+          {/* Button to clear data from the input box */}
+          <button
+            type="button"
+            className={`${styles.formBtn} ${styles.clearBtn}`}
+            onClick={clearForm}
+          >
+            Clear
+          </button>
 
-
+          {/* Button to submit the form and create a new album */}
+          <button className={`${styles.formBtn} ${styles.createBtn}`}>Create</button>
         </form>
       </div>
     </>
-  )
+  );
 }
 
-export default AlbumForm
+// Export the AlbumForm component
+export default AlbumForm;
